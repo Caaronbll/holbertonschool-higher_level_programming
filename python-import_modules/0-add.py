@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-from add_0 import add
+from add_0 import add as ad
 __name__ == "__main__"
 a = 1
 b = 2
-sum = add(a, b)
+sum = ad(a, b)
 print("{} + {} = {}".format(a, b, sum))
