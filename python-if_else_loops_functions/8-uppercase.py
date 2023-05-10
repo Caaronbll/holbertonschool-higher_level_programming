@@ -2,10 +2,9 @@
 
 def uppercase(str):
     asci = 0
-    i = 0
-    while str[i]:
+    for i in range(len(str)):
         asci = ord(str[i])
         if ord(str[i]) > 96 and ord(str[i]) < 123:
             asci -= 32
-        print("{chr(asci)}", end='')
+        print("{}".format(chr(asci)), end='')
     print()
