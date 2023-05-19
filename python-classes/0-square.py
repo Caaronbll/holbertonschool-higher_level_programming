@@ -3,6 +3,4 @@
 
 class Square:
     """defines square class"""
-    def __init__(self):
-
     pass
