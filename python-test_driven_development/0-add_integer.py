@@ -6,6 +6,9 @@ are integers or floats before they are added.
 
 
 def add_integer(a, b=98):
+    """
+    adds two integers and checks for type errors
+    """
     if type(a) is not int:
         if type(a) is float:
             a = int(a)

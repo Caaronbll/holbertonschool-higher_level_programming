@@ -6,3 +6,14 @@
 
 >>> add_integer(-10, 5)
 -5
+
+>>> add_integer("test", 4)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer("test", "test")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(5.4, 7.3)
+12
