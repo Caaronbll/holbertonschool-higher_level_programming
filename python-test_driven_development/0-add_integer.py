@@ -3,6 +3,8 @@
 Adds two integers and makes sure both integers
 are integers or floats before they are added.
 """
+
+
 def add_integer(a, b=98):
     if type(a) is not int:
         if type(a) is float:
