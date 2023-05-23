@@ -10,15 +10,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    def __repr__(self):
-        string = ''
-        if (self.__height == 0) or (self.__width == 0):
-            print()
-        else:
-            for i in range(self.height):
-                print("#" * self.width)
-        return string
-
     @property
     def width(self):
         """getter for width property"""
@@ -62,3 +53,15 @@ class Rectangle:
         else:
             p = (self.__width + self.__height) * 2
             return p
+
+    def __str__(self):
+        string = ''
+        if self.__height > 0 and self.__height > 0:
+            for row in range(self.__height):
+                for col in range(self.__width):
+                    string += '#'
+                if row < self.__height - 1:
+                    string += '\n'
+            return string
+        else:
+            return string
