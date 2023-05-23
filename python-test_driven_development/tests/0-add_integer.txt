@@ -17,3 +17,6 @@ TypeError: a must be an integer
 
 >>> add_integer(5.4, 7.3)
 12
+
+>>> add_integer(6)
+104
