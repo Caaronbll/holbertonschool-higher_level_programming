@@ -65,3 +65,7 @@ class Rectangle:
             return string
         else:
             return string
+
+    def __repr__(self) -> str:
+        """repr/eval function "giver" """
+        return f"({self.__height}, {self.__width})"
