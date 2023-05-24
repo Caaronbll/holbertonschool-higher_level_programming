@@ -57,7 +57,7 @@ class Rectangle:
     def __str__(self):
         string = ""
         if self.__width == 0:
-            print("\n")
+            print("")
         elif self.height > 0 and self.height > 0:
             for row in range(self.height):
                 for col in range(self.width):
