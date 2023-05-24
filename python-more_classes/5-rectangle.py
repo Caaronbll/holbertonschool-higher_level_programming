@@ -70,4 +70,5 @@ class Rectangle:
         """repr/eval function "giver" """
         return f"Rectangle({self.__width}, {self._height})"
 
-print(Rectangle(3, 3))
+    def __del__(self):
+        print("Bye rectangle...")
