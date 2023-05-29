@@ -10,7 +10,7 @@ specified class ; otherwise False
 
 def inherits_from(obj, a_class):
     """Definition"""
-    if isinstance(obj, a_class):
+    if isinstance(obj, a_class) and obj is not a_class:
         return True
     else:
         return False
