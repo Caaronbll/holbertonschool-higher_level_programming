@@ -2,6 +2,11 @@
 """dividing a matrix"""
 
 
+test_matrix = [
+    [1, 4],
+    [8, 10]
+]
+
 def matrix_divided(matrix, div):
     if type(matrix) is not int or float:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
@@ -23,3 +28,5 @@ def matrix_divided(matrix, div):
             new_matrix[row][col] = float(matrix[row][col] / 2)
 
     return new_matrix
+
+print(f"{matrix_divided(test_matrix, 2)}")
