@@ -9,5 +9,6 @@ of characters added
 
 
 def append_write(filename="", text=""):
+    """Appends text to the end of file"""
     with open(filename, 'a') as f:
         return f.write(text)
