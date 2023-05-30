@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-Write a class Square that inherits from Rectangle
-"""
+"""Write a class Square that inherits from Rectangle
+size: def __init__(self, size)"""
 
 
 Rectangle = __import__('9-rectangle.py').Rectangle
