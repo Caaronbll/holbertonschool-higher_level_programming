@@ -8,7 +8,7 @@ from models.base import Base
 class Rectangle(Base):
     """rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """named module"""
+        """Constructor"""
         super().__init__(id)
         self.__width = width
         self.__height = height
@@ -19,6 +19,11 @@ class Rectangle(Base):
     def width(self):
         """width setter"""
         return self.__width
+
+    @width.setter
+    def width(self, value):
+        self.validate_integer("width", value, False)
+        self.__width = value
 
     @property
     def height(self):
@@ -34,3 +39,12 @@ class Rectangle(Base):
     def y(self):
         """y setter"""
         return self.__y
+
+    def validate_integer(self, name, value, eq=True):
+        """method to validate the integer"""
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if eq and value < 0:
+            raise ValueError(f"{name} must be >= 0")
+        elif not eq and value <= 0:
+            raise ValueError(f"{name} must be > 0")
