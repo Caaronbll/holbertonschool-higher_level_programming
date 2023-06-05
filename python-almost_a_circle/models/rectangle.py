@@ -104,3 +104,8 @@ class Rectangle(Base):
             print(j)
         for i in range(self.__height):
             print(' ' * self.__x + img * self.__width)
+
+    def to_dictionary(self):
+        """returns a dictionary about the class"""
+        return {"id": self.id, "width": self.__width,
+                "height": self.__height, "x": self.__x, "y": self.__y}
