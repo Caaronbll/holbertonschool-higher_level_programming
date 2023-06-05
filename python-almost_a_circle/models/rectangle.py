@@ -17,7 +17,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width setter"""
+        """width getter"""
         return self.__width
 
     @width.setter
@@ -27,18 +27,33 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """height setter"""
+        """height getter"""
         return self.__height
+
+    @height.setter
+    def height(self, value):
+        self.validate_integer("height", value, False)
+        self.__height = value
 
     @property
     def x(self):
-        """x setter"""
+        """x getter"""
         return self.__x
+
+    @x.setter
+    def x(self, value):
+        self.validate_integer("x", value, True)
+        self.__x = value
 
     @property
     def y(self):
-        """y setter"""
+        """y getter"""
         return self.__y
+
+    @y.setter
+    def y(self, value):
+        self.validate_integer("y", value, True)
+        self.__y = value
 
     def validate_integer(self, name, value, eq=True):
         """method to validate the integer"""
