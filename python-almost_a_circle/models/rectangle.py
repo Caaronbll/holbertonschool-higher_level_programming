@@ -79,5 +79,6 @@ class Rectangle(Base):
     def display(self):
         """prints in stdout the rectangle made of #"""
         img = '#'
+        print('\n' * self.__y)
         for i in range(self.__height):
-            print(img * self.__width)
+            print(' ' * self.__x + img * self.__width)
