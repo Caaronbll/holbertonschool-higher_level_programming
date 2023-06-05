@@ -72,6 +72,26 @@ class Rectangle(Base):
         elif not eq and value <= 0:
             raise ValueError(f"{name} must be > 0")
 
+    def update(self, *args, **kwargs):
+        """updates attributes with and without keywords"""
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
+
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        """updates the attributes"""
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
     def area(self):
         """returns the area of the rectangle"""
         return self.__height * self.__width
