@@ -10,6 +10,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor"""
         super().__init__(id)
+        self.validate_integer("width", width, False)
+        self.validate_integer("height", height, False)
+        self.validate_integer("x", x, True)
+        self.validate_integer("y", y, True)
         self.__width = width
         self.__height = height
         self.__x = x
