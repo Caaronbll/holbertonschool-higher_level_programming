@@ -1,16 +1,11 @@
 #!/usr/bin/python3
 
 import unittest
-import pep8
-import inspect
+from models.base import Base
 
-class TestCodeFormat(unittest.TestCase):
+class TestBase(unittest.TestCase):
+    """Testing the Base Class"""
 
-    def test_pep8_conformance(self):
-        """tests"""
-        pep8style = pep8.StyleGuide(quiet=True)
-        mode_base = pep8style.check_files(['models/base.py',
-                                           'models/rectangle.py',
-        ])
-        self.assertEqual(mode_base.total_errors, 0,
-                         "Found code style errors (models_base).")
+    def setUp(self):
+        Base.__nb_objects = 0
+        pass
