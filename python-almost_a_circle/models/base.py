@@ -21,6 +21,7 @@ class Base():
             return "[]"
         return json.dumps(list_dictionaries)
 
+    @classmethod
     def save_to_file(cls, list_objs):
         """writes Json string to file"""
         jlist = []
@@ -32,3 +33,9 @@ class Base():
         st = cls.to_json_string(jlist)
         with open(filename, "w", encoding="utf-8") as f:
             f.write(st)
+
+    @staticmethod
+    def from_json_string(json_string):
+            """ static method """
+            if not json_string or len(json_string) == 0:
+                return []
