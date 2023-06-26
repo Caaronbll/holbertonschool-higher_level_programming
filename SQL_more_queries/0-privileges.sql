@@ -1,2 +1,2 @@
--- script that lists all privileges of the MySQL users
-SELECT * FROM mysql.users;
+-- script that lists all privileges of the MySQL user
+SHOW GRANTS FOR 'user_0d_1'@'localhost';
