@@ -10,7 +10,7 @@ if __name__ == "__main__":
                                passwd=sys.argv[2], db=sys.argv[3],
                                charset="utf8")
     cur = db_cnctn.cursor()
-    cur.execute("SELECT * FROM states WHERE\
-                BINARY name = {}".format(sys.argv[4]))
+    cur.execute("SELECT * FROM states\
+                WHERE BINARY name = {}".format(sys.argv[4]))
     for state in cur.fetchall():
         print(f"{state}")
