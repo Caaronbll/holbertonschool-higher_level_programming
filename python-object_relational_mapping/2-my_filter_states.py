@@ -11,6 +11,9 @@ if __name__ == "__main__":
                                charset="utf8")
     cur = db_cnctn.cursor()
     cur.execute("SELECT * FROM 'states'\
-                WHERE BINARY 'name' = '{}'".format(sys.argv[4]))
+                WHERE BINARY 'name' = '{}' ORDER BY id ASC".format(sys.argv[4]))
     for state in cur.fetchall():
         print(f"{state}")
+
+    cur.close()
+    db_cnctn.close()
