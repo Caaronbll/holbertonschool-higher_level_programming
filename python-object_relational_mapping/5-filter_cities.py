@@ -16,5 +16,11 @@ if __name__ == "__main__":
                 JOIN states ON states.id = cities.state_id\
                 WHERE states.name = %s ORDER BY cities.id ASC")
 
-    for row in db_connect.fetchall():
-        print(f"{row}")
+    row = db_connect.fetchall()
+
+    if len(row) == 0:
+        print()
+
+    for i in range(len(row) - 1):
+        print(row[i][0], end=', ')
+    print(row[len(row) - 1][0])
