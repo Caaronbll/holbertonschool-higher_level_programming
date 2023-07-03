@@ -13,7 +13,8 @@ if __name__ == "__main__":
                                charset="utf8")
 
     db_connect = db_cnctn.cursor()
-    db_connect.execute("SELECT * FROM states WHERE NAME LIKE 'N%';")
+    db_connect.execute("SELECT * FROM states WHERE NAME LIKE 'N%'\
+                       ORDER BY states.id ASC;")
 
-    for row in db_connect.fectchall():
-        print()
+    for row in db_connect.fetchall():
+        print(row)
