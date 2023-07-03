@@ -12,9 +12,9 @@ if __name__ == "__main__":
                                charset="utf8")
 
     db_connect = db_cnctn.cursor()
-    db_connect.execute("SELECT cities.id, cities.name, states.name\
-                FROM cities LEFT JOIN states ON states.id\
-                = cities.state_id ORDER BY id")
+    db_connect.execute("SELECT * FROM `cities` as `c` \
+                INNER JOIN `states` as `s` \
+                   ON `c`.`state_id` = `s`.`id` \
+                ORDER BY `c`.`id`")
 
-    for row in db_connect.fetchall():
-        print(f"{row}")
+    print(", ".join([ct[2] for ct in c.fetchall() if ct[4] == sys.argv[4]]))
