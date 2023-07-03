@@ -11,16 +11,19 @@ if __name__ == "__main__":
                                passwd=sys.argv[2], db=sys.argv[3],
                                charset="utf8")
 
-    db_connect = db_cnctn.cursor()
-    db_connect.execute("SELECT cities.name FROM cities\
+    cursor = db_cnctn.cursor()
+
+    buffer_string = "SELECT cities.name FROM cities\
                 JOIN states ON states.id = cities.state_id\
-                WHERE states.name = %s ORDER BY cities.id ASC")
+                WHERE states.name = %s ORDER BY cities.id ASC"
 
-    row = db_connect.fetchall()
+    cursor.execute(buffer_string, (sys.argv[4],))
 
-    if len(row) == 0:
+    rows = cursor.fetchall()
+
+    if len(rows) == 0:
         print()
 
-    for i in range(len(row) - 1):
-        print(row[i][0], end=', ')
-    print(row[len(row) - 1][0])
+    for i in range(len(rows) - 1):
+        print(rows[i][0], end=', ')
+    print(rows[len(rows) - 1][0])
