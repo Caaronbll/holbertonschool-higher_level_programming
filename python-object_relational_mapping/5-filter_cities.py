@@ -16,5 +16,6 @@ if __name__ == "__main__":
                 INNER JOIN `states` as `s` \
                    ON `c`.`state_id` = `s`.`id` \
                 ORDER BY `c`.`id`")
-
-    print(", ".join([row[2] for row in db_connect.fetchall() if row[4] == sys.argv[4]]))
+    for row in db_connect.fetchall():
+        if row[4] == sys.argv[4]:
+            print(", ".join([row[2]]))
