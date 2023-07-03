@@ -17,4 +17,5 @@ if __name__ == "__main__":
                        ORDER BY states.id ASC;")
 
     for row in db_connect.fetchall():
-        print(row)
+        if row[1][0] == "N":
+            print(row)
