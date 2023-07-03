@@ -9,7 +9,7 @@ import MySQLdb
 if __name__ == "__main__":
     """main function"""
 
-    db_cnctn = MySQLdb.Connect(host="localhost", port="3306",
+    db_cnctn = MySQLdb.connect(host="localhost", port="3306",
                                usermane=sys.argv[1], password=sys.argv[2],
                                database=sys.argv[3],
                                charset="utf8")
