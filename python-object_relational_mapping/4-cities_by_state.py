@@ -12,7 +12,9 @@ if __name__ == "__main__":
                                charset="utf8")
 
     db_connect = db_cnctn.cursor()
-    db_connect.execute("SELECT * FROM states WHERE name = %s ORDER BY id")
+    db_connect.execute("SELECT cities.id, cities.name, states.name\
+                FROM cities LEFT JOIN states ON states.id\
+                = cities.state_id ORDER BY id")
 
-    for state in db_connect.fetchall():
-        print(f"{state}")
+    for row in db_connect.fetchall():
+        print(f"{row}")
