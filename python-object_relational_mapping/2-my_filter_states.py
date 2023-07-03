@@ -17,6 +17,4 @@ if __name__ == "__main__":
                 WHERE BINARY `name` = '{}'".format(sys.argv[4]))
 
     for row in db_connect.fetchall():
-        #if state.name() == sys.argv[4]:
         print(f"{row}")
-
