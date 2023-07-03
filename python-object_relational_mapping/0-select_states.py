@@ -9,9 +9,8 @@ import MySQLdb
 if __name__ == "__main__":
     """main function"""
 
-    db_cnctn = MySQLdb.connect(host="localhost", port="3306",
-                               usermane=sys.argv[1], password=sys.argv[2],
-                               database=sys.argv[3],
+    db_cnctn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                               passwd=sys.argv[2], db=sys.argv[3],
                                charset="utf8")
 
     db_connect = db_cnctn.cursor()
