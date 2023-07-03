@@ -13,5 +13,8 @@ if __name__ == "__main__":
                                charset="utf8")
 
     db_connect = db_cnctn.cursor()
-    db_connect.execute("SELECT * \
-                 FROM `states` ")
+    db_connect.execute("SELECT * FROM states")
+
+    for row in db_connect.fetchall():
+        if row[1] == sys.argv[4]:
+            print(f"{row}")
