@@ -11,14 +11,11 @@ if __name__ == "__main__":
                 'mysql+mysqldb://{}:{}@localhost:3306/{}'
                 .format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
-
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State)
-    new_state = states.filter_by(name=argv[4]).first()
-
-    if new_state:
-        print("{}".format(new_state.id))
+    item = session.query(State).filter_by(name=argv[4]).first()
+    if item:
+        print("{}".format(item.id))
     else:
         print("Not found")
 
