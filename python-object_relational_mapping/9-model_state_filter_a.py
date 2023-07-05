@@ -13,6 +13,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    for item in Session.query(State).filter(State.name.like
+    session = Session()
+    for item in session.query(State).filter(State.name.like
                                             ('%a%')).order_by(State.id):
         print("{}: {}".format(item.id, item.name))
