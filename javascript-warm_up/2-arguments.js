@@ -1,11 +1,6 @@
 #!/usr/bin/node
 
-import { argv } from 'node:process';
-
-let argcount = 0;
-argv.forEach((val, index) => {
-  argcount =+ 1;
-});
+const argcount = process.argv.length;
 
 if (argcount == 0){
   console.log('No argument');
