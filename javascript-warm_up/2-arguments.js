@@ -7,5 +7,5 @@ if (argcount === 0) {
 } else if (argcount === 1) {
   console.log('Argument found');
 } else if (argcount > 1) {
-  console.log('Arguments found')
+  console.log('Arguments found');
 }
