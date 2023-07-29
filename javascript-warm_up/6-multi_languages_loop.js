@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let a = [];
+const a = [];
 a[1] = 'C is fun';
 a[2] = 'Python is cool';
 a[3] = 'JavaScript is amazing';
