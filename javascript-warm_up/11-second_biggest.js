@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function findSecondBiggestInteger(...args) {
+function findSecondBiggestInteger (...args) {
   if (args.length <= 1) {
     return 0;
   }
@@ -11,20 +11,20 @@ function findSecondBiggestInteger(...args) {
   for (const arg of args) {
     const num = parseInt(arg);
 
-  if (num > biggest) {
+    if (num > biggest) {
       secondBiggest = biggest;
       biggest = num;
     } else if (num > secondBiggest && num !== biggest) {
       secondBiggest = num;
     }
-  }
+    }
 
   return secondBiggest;
 }
 
-  // Get command-line arguments and pass them to the function
-  const args = process.argv.slice(2);
-  const secondBiggest = findSecondBiggestInteger(...args);
+// Get command-line arguments and pass them to the function
+const args = process.argv.slice(2);
+const secondBiggest = findSecondBiggestInteger(...args);
 
-  // Print the result
-  console.log(secondBiggest);
+// Print the result
+console.log(secondBiggest);
