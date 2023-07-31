@@ -7,5 +7,5 @@ if (isNaN(x[0])) {
 } else {
   for (let i = 0; i < x[0]; i++) {
     console.log('C is fun');
-  };
+  }
 }
