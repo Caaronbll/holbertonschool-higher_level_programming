@@ -17,7 +17,7 @@ function findSecondBiggestInteger (...args) {
     } else if (num > secondBiggest && num !== biggest) {
       secondBiggest = num;
     }
-    }
+  }
 
   return secondBiggest;
 }
