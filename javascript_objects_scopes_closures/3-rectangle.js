@@ -14,7 +14,7 @@ class Rectangle {
       count += 'X';
     }
     for (let y = 0; y < this.height; y++) {
-        console.log(count);
+      console.log(count);
     }
   }
 }
