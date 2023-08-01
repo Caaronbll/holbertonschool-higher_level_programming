@@ -7,9 +7,8 @@ class Square extends BaseSquare {
     if (c === undefined) {
       c = 'X';
     }
-    const line = c.repeat(this.size);
-    for (let i = 0; i < this.size; i++) {
-      console.log(line);
+    for (let y = 0; y < this.height; y++) {
+      console.log(c.repeat(this.width));
     }
   }
 }
