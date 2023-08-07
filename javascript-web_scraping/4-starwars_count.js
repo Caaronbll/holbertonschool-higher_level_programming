@@ -17,6 +17,6 @@ request.get(url, (err, response, body) => {
         }
       }
     }
-  console.log(counter);
+    console.log(counter);
   }
 });
