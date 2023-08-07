@@ -4,7 +4,6 @@ const request = require('request');
 const url = process.argv[2];
 let counter = 0;
 
-
 request.get(url, (err, response, body) => {
   if (err) {
     console.log(err);
